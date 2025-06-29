@@ -273,6 +273,44 @@ body {
     color: var(--text-muted);
 }
 
+.footer p {
+    margin-bottom: 1rem;
+}
+
+/* Bolt Badge */
+.bolt-badge {
+    margin-top: 1rem;
+}
+
+.bolt-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--bg-secondary);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--border-color);
+    border-radius: 2rem;
+    padding: 0.75rem 1.5rem;
+    color: var(--text-primary);
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.bolt-link:hover {
+    background: var(--bg-tertiary);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    color: var(--accent-color);
+}
+
+.bolt-link i {
+    color: var(--accent-color);
+    font-size: 1rem;
+}
+
 /* Game Header */
 .game-header {
     display: flex;
@@ -1043,6 +1081,15 @@ body {
     .mode-btn {
         text-align: center;
     }
+
+    .bolt-badge {
+        margin-top: 1.5rem;
+    }
+
+    .bolt-link {
+        font-size: 0.8rem;
+        padding: 0.6rem 1.2rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1067,6 +1114,11 @@ body {
 
     .completion-title {
         font-size: 1.5rem;
+    }
+
+    .bolt-link {
+        font-size: 0.75rem;
+        padding: 0.5rem 1rem;
     }
 }
 
@@ -1094,14 +1146,16 @@ body {
 button:focus,
 .game-card:focus,
 .ttt-cell:focus,
-.memory-card:focus {
+.memory-card:focus,
+.bolt-link:focus {
     outline: 2px solid var(--accent-color);
     outline-offset: 2px;
 }
 
 /* Print styles */
 @media print {
-    .theme-toggle {
+    .theme-toggle,
+    .bolt-badge {
         display: none;
     }
     
